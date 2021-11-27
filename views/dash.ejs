@@ -1,0 +1,19 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+<%if (admin) { %>
+    <a href="/admin" class="btn btn-secondary">ADMIN PANEL</a>
+<% } %>
+
+<% for(let i=0 ; i < classes_data.length ; i++){ %> 
+    <div class="classes">
+        <a href= "<%= "/show-class/" + classes_data[i]._id + "/" %>" >
+            <%= classes_data[i].name  %>
+        </a>
+        <%= classes_data[i].faculty.name  %>
+        <hr>
+    </div>
+<% } %>
+
+<!-- <%= classes_data %> -->
+
+<a href="/auth/logout" class="btn btn-secondary">Logout</a>

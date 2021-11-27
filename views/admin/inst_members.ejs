@@ -1,0 +1,76 @@
+<!-- <br>
+
+<h1>Students</h1>
+<br>
+
+<% for(let i=0 ; i < students.length ; i++){ %> 
+    <a href= "<%= "/profile/" + students[i]._id + "/" %>"> <%= students[i].name %> </a>
+    <a style="color: red;" href= "<%= "/admin/remove-member/" + students[i]._id + "/" %>"> Remove Student </a>
+    <hr>
+<% } %>
+
+<h1>Faculty</h1>
+<br>
+
+
+<% for(let i=0 ; i < faculty.length ; i++){ %> 
+    <a href= "<%= "/profile/" + faculty[i]._id + "/" %>"> <%= faculty[i].name %> </a>
+    <a style="color: red;" href= "<%= "/admin/remove-member/" + faculty[i]._id + "/" %>"> Remove Faculty </a>
+    <hr>
+<% } %> -->
+
+
+<nav class="navbar navbar-expand-lg ">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href= "/admin/dashboard" >Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href= "<%= "/profile/" + userId + "/" %>" >Profile</a>
+        <a class="nav-item nav-link" href= "/admin/inst-members" %>" >People</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  <div class="scommon">
+    <div class="teacher">
+      <div class = "f_head">Teacher</div>
+      <% for(var i=0 ; i<faculty.length ; i++){ %>
+        <div class = "stds">
+          <a href= "<%= "/profile/" + faculty[i]._id + "/" %>">
+            <%= faculty[i].name %>
+          </a>
+      </div>
+      <% } %>
+    </div>
+    <div class="std">
+      <div class = "f_head">Students</div>
+    <% for(var i=0 ; i<students.length ; i++){ %>
+      <div class = "stds">
+        <a href= "<%= "/profile/" + students[i]._id + "/" %>">
+          <%= students[i].name %>
+        </a>
+        <span class = "rmv_std">
+            <a href= "<%= "/admin/remove-student/" + students[i]._id + "/" %>">
+              Remove Student
+            </a>
+        </span>
+    </div>
+    <% } %>
+    </div>
+</div>
+  
+
+
+<!-- prdeep11 -->
+
+
+
+
+
+<!-- prdeep11 -->
+

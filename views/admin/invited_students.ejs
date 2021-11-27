@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg ">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href= "<%= "/admin/show-class/" + userClass._id + "/" %>" >Stream <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href= "<%= "/admin/show-class/" + userClass._id + "/classwork" %>" >Classwork</a>
+        <a class="nav-item nav-link" href= "<%= "/admin/show-class/" + userClass._id + "/members" %>" >Members</a>
+      </div>
+    </div>
+  </nav>
+
+<div style="width: 70%; margin: 0 auto;" class="std">
+    <div style="text-align: center;" class = "f_head">Invited Students</div>
+  <% for(var i=0 ; i<students.length ; i++){ %>
+    <div class = "stds">
+        <%= students[i].name %>
+      <span class = "rmv_std">
+        <a style="color: #00dcbd !important;" href= "<%= "/profile/" + students[i]._id + "/" %>">
+            View Profile
+        </a>
+      </span>
+  </div>
+  <% } %>
+  </div>
+

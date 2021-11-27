@@ -1,0 +1,57 @@
+<!-- <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center">
+        <h2>
+          Create New Assignment
+        </h2>
+        <form action= "<%= "/faculty/" + clss._id + "/create-assignment/" %>" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Enter Title"
+              value="<%= typeof title != 'undefined' ? title : '' %>" />
+          </div>
+          <div class="form-group">
+            <label for="description">description</label>
+            <input type="textarea" id="description" name="description" class="form-control" placeholder="Enter description"
+              value="<%= typeof description != 'undefined' ? description : '' %>" />
+          </div>
+          
+          <input type="file" name="file" id="file" required>
+          <label for="file" class = "label"><i id = "icon_attach" class="fas fa-paperclip"> </i>  Upload File</label>;
+  
+          <button type="submit" class="btn btn-primary btn-block">
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+  <form style="left: 49%;" action= "<%= "/faculty/" + clss._id + "/create-assignment/" %>" method="POST" enctype="multipart/form-data">
+    <h3>Create New Assignment</h3>
+  
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter Title"
+              value="<%= typeof title != 'undefined' ? title : '' %>" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="textarea" id="description" name="description" placeholder="Enter Description"
+              value="<%= typeof description != 'undefined' ? description : '' %>" />
+    </div>
+
+    <div class="upload-main-wrapper">
+      <div class="upload-wrapper">
+        <!-- <input type="file" id="upload-file"> -->
+        <input type="file" name="file" id="file">
+        <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M"><path d="M4 15h2v3h12v-3h2v3c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2m4.41-7.59L11 7.83V16h2V7.83l2.59 2.59L17 9l-5-5-5 5 1.41 1.41z"></path></svg>
+        <span class="file-upload-text">Upload File</span>
+      </div>
+      <p id="file-upload-name"></p>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Create</button>
+  
+  </form>
+  

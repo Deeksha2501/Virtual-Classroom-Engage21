@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg ">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href= "<%= "/admin/show-class/" + userClass._id + "/" %>" >Stream <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href= "<%= "/admin/show-class/" + userClass._id + "/classwork" %>" >Classwork</a>
+        <a class="nav-item nav-link" href= "<%= "/admin/show-class/" + userClass._id + "/members" %>" >Members</a>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+  <div class="class_image">
+    <img src = "<%= userClass.image_url %>" alt="Dash_img" class="class_img">
+    <p class="class_name"><%= userClass.name %></p>
+    <p class="faculty_name"><%= userClass.faculty.name %></p>
+    <a href= "<%= "/admin/invite/" + userClass._id + "/" %>" class="btn btn-primary btn-block invite_std">
+        <i class="fas fa-mail-bulk"></i>
+        Invite Students
+    </a>
+  
+  </div>
+  
+  
+  <form class="discussion_form" action="<%="/admin/show-class/" + userClass._id + "/disccusion/new/" %>" method="post" enctype="multipart/form-data">
+    <input class="dinput" type="textarea" name="discuss_msg" placeholder="Announce something to the class">
+    <!-- <div class="main-wrapper"> -->
+      <div class="upload-main-wrapper">
+        <div class="upload-wrapper">
+          <!-- <input type="file" id="upload-file"> -->
+          <input type="file" name="file" id="file">
+          <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M"><path d="M4 15h2v3h12v-3h2v3c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2m4.41-7.59L11 7.83V16h2V7.83l2.59 2.59L17 9l-5-5-5 5 1.41 1.41z"></path></svg>
+          <span class="file-upload-text">Upload File</span>
+        </div>
+        <p id="file-upload-name"></p>
+      </div>
+    <!-- </div> -->
+    <button class="post_btn">Post</button>
+  </form>
+  
+  <!-- <%= arrDiscussions %> -->
+  <div class="discuss_div">
+  <% for(let i=0 ; i < arrDiscussions.length ; i++){ %> 
+  
+    <div class="disbox">
+      <div class="iconbox">
+          <% if(userClass.faculty._id.toString() == arrDiscussions[i].sender_id._id.toString()){ %>
+            <span class="icon">
+                <i class="fas fa-chalkboard-teacher fa-sm"></i>
+            </span>
+          <%}else{%>
+          <span class="icon">
+              <i class="fas fa-users"></i>
+          </span>
+          <%}%>  
+  </div>
+  <div class="msgbox ">
+      <span class="s_name"><%= arrDiscussions[i].sender_id.name %>
+        <%if (arrDiscussions[i].sender_id.admin) { %>
+          (Admin)
+      <% } %>
+      </span><br>
+      <span class="s_msg"><%= arrDiscussions[i].msg %></span><br>
+  </div>
+
+  <% if(arrDiscussions[i].fileUrl != ""){ %>
+  <div class="attachment">
+      <a target="_blank" href="<%= arrDiscussions[i].fileUrl %>">
+          <span class="dicon">
+            Attachment
+          </span>
+        </a>
+      </div>
+  <%}%>
+
+  </div>
+<% } %>
+</div>
+
+
+
+
+
+

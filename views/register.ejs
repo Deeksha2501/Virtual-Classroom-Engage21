@@ -1,0 +1,233 @@
+<div class="register_div">
+<form class="register_form" action="/auth/register" method="POST" enctype="multipart/form-data">
+  <h3>Register Here</h3>
+
+  <%- include ("./messages") %>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="name"
+      id="name"
+      name="name"
+      placeholder="Enter Name"
+      value="<%= typeof name != 'undefined' ? name : '' %>"
+    />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter Email"
+      value="<%= typeof email != 'undefined' ? email : '' %>"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter Password"
+      value="<%= typeof password != 'undefined' ? password : '' %>"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password2">Confirm Password</label>
+    <input
+      type="password"
+      id="password2"
+      name="password2"
+      placeholder="Confirm Password"
+      value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+    />
+  </div>
+
+  <!-- <select name="inst" id="inst">
+    <% for ( var i = 0; i < insts.length; i++ ) { %><option
+      id="inst"
+      name="inst"
+      value="<%=insts[ i ]._id %>">
+      <%= insts[ i ].name %></option
+    ><% } %>
+  </select> -->
+
+  <div class="form-group">
+    <!-- <input type="radio" id="teacher" name="role" value="teacher" />
+      <label for="teacher">teacher</label><br />
+      <input type="radio" id="student" name="role" value="student" />
+      <label for="student">student</label><br /> -->
+
+    <div class="role">Role</div>
+    <ul>
+      <li>
+        <input type="radio" id="teacher" name="role" value="teacher" />
+        <label for="teacher">Teacher</label>
+        <div class="check"></div>
+      </li>
+
+      <li>
+        <input type="radio" id="student" name="role" value="student" />
+        <label for="student">Student</label>
+        <div class="check"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="list-choice institute">
+    <div class="list-choice-objects">
+      <% for ( var i = 0; i < insts.length; i++ ) { %>
+      <label>
+        <input type="radio" name="inst" value="<%=insts[ i ]._id %>" />
+        <span><%= insts[ i ].name %></span>
+      </label>
+      <% } %>
+    </div>
+    <div class="list-choice-title">Institute</div>
+  </div>
+
+  <div class="student_specific" id="student_specific">
+    <div class="form-group batch">
+      <!-- <label for="batch">Batch</label> -->
+      <input
+        type="number"
+        id="batch"
+        name="batch"
+        placeholder="Enter Batch"
+        value="<%= typeof batch != 'undefined' ? batch : '' %>"
+      />
+    </div>
+
+    <div class="list-choice">
+      <div class="list-choice-title">Branch</div>
+      <div class="list-choice-objects">
+        <% var options = [ "Computer Science", "Electrical", "Electronics", "Chemical", "Civil", "Mechanical" ]; for ( var i =
+        0; i < options.length; i++ ) { %>
+        <label>
+          <input type="radio" name="branch" value="<%=options[ i ] %>" />
+          <span><%= options[ i ] %></span>
+        </label>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  <select name="branch" id="branch">
+    <% var options = [ "CSE", "EE", "ECE", "CH", "CE", "ME" ]; 
+      for ( var i = 0; i < options.length; i++ ) { %>
+    <option
+      id="branch"
+      name="branch"
+      value="<%=options[ i ] %>">
+      <%= options[ i ] %>
+      </option>
+      <% } %>
+  </select> -->
+
+  <div class="upload-main-wrapper">
+    <div class="upload-wrapper">
+      <!-- <input type="file" id="upload-file"> -->
+      <input type="file" name="file" id="file">
+      <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M"><path d="M4 15h2v3h12v-3h2v3c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2m4.41-7.59L11 7.83V16h2V7.83l2.59 2.59L17 9l-5-5-5 5 1.41 1.41z"></path></svg>
+      <span class="file-upload-text">Upload File</span>
+    </div>
+    <p id="file-upload-name"></p>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Register</button>
+
+  <div class="social go_to_login">
+    <a href="/auth/login">
+      <div class="go">
+        Already have an account? Login
+      </div>
+    </a>
+  </div>
+</form>
+</div>
+
+<!-- <div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+      <h1 class="mb-3">
+        <img src="/assets/secure-icon.png" alt="icon" width="20%" />
+      </h1>
+      <h2>
+        Register New User
+      </h2>
+      <%- include ("./messages") %>
+      <form action="/auth/register" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" id="name" name="na placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="ema placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="passwo placeholder="Enter Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>" />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input type="password" id="password2" name="passwor placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+        </div>
+         <div class="form-group">
+          <label for="name">Institute ID</label>
+          <input type="inst" id="inst" name="in placeholder="Enter Institute ID"
+            value="<%= typeof inst != 'undefined' ? inst : '' %>" />
+        </div> 
+
+        <select name="inst" id="inst">
+
+          <%
+          for ( var i = 0; i < insts.length; i++ )
+          {
+              %><option id="inst" name="inst" value="<%=insts[ i ]._id %>" ><%= insts[ i ].name %></option><%
+          }
+          %>
+
+        </select>
+
+
+        <div class="form-group" id="role_id">
+          <p>Role</p>
+          <input type="radio" id="teacher" name="role" value="teacher">
+          <label for="teacher">teacher</label><br>
+          <input type="radio" id="student" name="role" value="student">
+          <label for="student">student</label><br>
+        </div>
+
+        <div class="form-group">
+          <label for="batch">batch</label>
+          <input type="number" id="batch" name="bat placeholder="Enter batch"
+            value="<%= typeof batch != 'undefined' ? batch : '' %>" />
+        </div>
+
+  
+          <select name="branch" id="branch">
+
+          <%
+          var options = [ "CSE", "EE", "ECE", "CH", "CE", "ME" ];
+          for ( var i = 0; i < options.length; i++ )
+          {
+              %><option id="branch" name="branch" value="<%=options[ i ] %>" ><%= options[ i ] %></option><%
+          }
+          %>
+          </select>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <p class="mt-4">Already have an account? <a href="/auth/login">Login</a></p>
+    </div>
+  </div>
+</div> -->

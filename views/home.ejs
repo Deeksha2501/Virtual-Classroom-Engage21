@@ -1,0 +1,96 @@
+
+<a href="/auth/logout" class="btn btn-secondary logout_btn">Logout</a>
+<h1 class="mt-4 inst-name"><%= inst.name %></h1>
+<p class="welcome-msg">Welcome <%= name %>
+    <%if (admin) { %>
+        (Admin)
+    <% } %>
+</p>
+
+
+
+<div class="box">
+<%if (admin) { %>
+    <a href="/admin/dashboard">
+        <div class="btn">
+            <button class="dash_button1 dash_btn">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <p class="btn_dash_text">DASHBOARD</p>
+            </button>
+        </div>
+    </a>
+    
+<% } %>
+
+<% if (role == "teacher" && !admin) { %>
+    <a href="/faculty/dashboard">
+        <div class="btn">
+            <button class="dash_button1 dash_btn">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <p class="btn_dash_text">DASHBOARD</p>
+            </button>
+        </div>
+    </a>
+<% } %>
+
+<% if (role == "student" && !admin) { %>
+    <a href="/student/dashboard">
+        <div class="btn">
+            <button class="dash_button1 dash_btn">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <p class="btn_dash_text">DASHBOARD</p>
+            </button>
+        </div>
+    </a>
+<% } %>
+
+<div class="btn">
+    <a href=  "<%= "/profile/" + id + "/" %>" >
+        <button class="dash_button2 dash_btn">
+            <i class="fas fa-user-tie"></i>
+            <p class="btn_dash_text">PROFILE</p>
+        </button>
+    </a>
+</div>
+
+
+<%if (admin) { %>
+    <div class="btn">
+        <a href=  "/admin/inst-members" >
+        <button class="dash_button3 dash_btn">
+            <i class="fas fa-users"></i>
+            <p class="btn_dash_text">MEMBERS</p>
+        </button>
+        </a>
+    </div>
+    
+<% } %>
+
+<% if (role == "teacher" && !admin) { %>
+    <div class="btn">
+        <a href=  "/faculty/members" >
+        <button class="dash_button3 dash_btn">
+            <i class="fas fa-users"></i>
+            <p class="btn_dash_text">MEMBERS</p>
+        </button>
+        </a>
+    </div>
+<% } %>
+
+<% if (role == "student" && !admin) { %>
+    <div class="btn">
+        <a href=  "/student/members" >
+        <button class="dash_button3 dash_btn">
+            <i class="fas fa-users"></i>
+            <p class="btn_dash_text">MEMBERS</p>
+        </button>
+        </a>
+    </div>
+<% } %>
+
+
+
+</div>
+
+
+

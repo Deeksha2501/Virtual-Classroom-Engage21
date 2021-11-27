@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg ">
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href= "<%= "/student/show-class/" + userClassId + "/" %>" >Stream <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href= "<%= "/student/show-class/" + userClassId + "/classwork" %>" >Classwork</a>
+      <a class="nav-item nav-link" href= "<%= "/student/show-class/" + userClassId + "/members" %>" >Members</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- <h1>Faculty</h1>
+<br>
+<a href= "<%= "/profile/" + faculty._id + "/" %>"> <%= faculty.name %> </a>
+
+<h1>Students</h1>
+<br> -->
+
+<!-- <% for(let i=0 ; i < arrStudents.length ; i++){ %> 
+    <a href= "<%= "/profile/" + arrStudents[i]._id + "/" %>"> <%= arrStudents[i].name %> </a>
+    <a style="color: red;" href= "<%= "/faculty/class/" + userClassId + "/report-student/" + arrStudents[i]._id + "/" %>"> Report Student </a>
+    <hr>
+<% } %> -->
+
+<div class="scommon">
+  <div class="teacher">
+    <div class = "f_head">Teacher</div>
+    <div class="teacher_name">
+      <a href= "<%= "/profile/" + faculty._id + "/" %>">
+        <%= faculty.name %>
+      </a>
+    </div>
+  </div>
+  <div class="std">
+    <div class = "f_head">Classmates</div>
+  <% for(var i=0 ; i<arrStudents.length ; i++){ %>
+    <div class = "stds">
+      <a href= "<%= "/profile/" + arrStudents[i]._id + "/" %>">
+        <%= arrStudents[i].name %>
+      </a>
+  </div>
+  <% } %>
+  </div>
+  </div>

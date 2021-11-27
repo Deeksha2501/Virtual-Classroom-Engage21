@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+body{
+  background: #040d15 !important;
+}
+
+.container1{
+  padding: 0 50px;
+}
+
+.page-contain {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #E7F3F1;
+  border: 0.75em solid white;
+  padding: 2em;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+
+.data-card {
+  display: inline-block;
+  flex-direction: column;
+  min-width: 20em;
+  max-width: 23.75em;
+  min-height: 16.75em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  text-decoration: none;
+  background: rgb(226, 226, 226);
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
+  transition: transform 0.45s ease, background 0.45s ease;
+}
+.data-card h3 {
+  color: #2E3C40;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #011b5a;
+  transition: color 0.45s ease, border 0.45s ease;
+}
+.data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 10px 0 16px;
+  transition: color 0.45s ease;
+}
+
+.class_head{
+  margin-bottom: 50px;
+  font-size: 30px;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.data-card p {
+  opacity: 0;
+  color: #dbd8d8;
+  /* font-weight: 600; */
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+  margin-bottom: 35px;
+}
+.data-card .link-text {
+  display: block;
+  color: #1d4aaf;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
+.data-card .link-text svg {
+  margin-left: 0.5em;
+  transition: transform 0.6s ease;
+}
+.data-card .link-text svg path {
+  transition: fill 0.45s ease;
+}
+.data-card:hover {
+  background: #005d68;
+  transform: scale(1.02);
+}
+.data-card:hover h3 {
+  color: #FFFFFF;
+  border-bottom-color: #3eebff;
+}
+.data-card:hover h4 {
+  color: #FFFFFF;
+}
+.data-card:hover p {
+  opacity: 1;
+  /* transform: none; */
+}
+.data-card:hover .link-text {
+  color: #FFFFFF;
+}
+
+.link-text svg{
+  color: #1d4aaf;
+
+}
+.data-card:hover .link-text svg {
+  animation: point 1.25s infinite alternate;
+}
+.data-card:hover .link-text svg path {
+  fill: #FFFFFF;
+}
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
+}
+
+
+
+
+
+
+.box{
+	margin : auto auto;
+	width : 50%;
+	padding-top : 5%;
+	padding-left: 22%;
+}
+
+.box a{
+  display: inline-block;
+}
+
+.dash_btn {
+	top : 50%;
+	left : 50%;
+	transform: translate(-50%);
+	padding-top: 13px;
+	background : none;
+	width : 240px;
+	height : 80px;
+	font-size: 16px;
+	border-radius: 4px;
+	transition : .6s;
+	overflow : hidden;
+}
+
+.dash_button1{
+	color : #ccc;
+	border : 1px solid #338033;
+}
+
+.dash_btn:focus{
+	outline: none;
+}
+
+.dash_btn:before{
+	content : '';
+	display :block;
+	position : absolute;
+	width : 60px;
+	height : 100%;
+	left : 0;
+	top : 0;
+	opacity: .5s;
+	filter : blur(30%);
+	transform: translateX(-130px) skewX(-15deg);
+}
+
+.dash_btn:after{
+	content : '';
+	display :block;
+	position : absolute;
+	width : 30px;
+	height : 100%;
+	left : 30px;
+	top : 0;
+	opacity : 0;
+	filter : blur(30px);
+	transform: translate(-100px) scaleX(-15deg);
+}
+
+.dash_button1:before{
+	background : rgba(255 , 255 , 255 , .5);
+}
+
+.dash_button1:after{
+	background : rgba(255 , 255 , 255 , .2);
+}
+
+.dash_button1:hover{
+	background: #338033;
+	cursor : pointer;
+}
+
+.dash_btn:hover:before{
+	transform : translateX(300px) skewX(-15deg);
+	opacity : .6;
+	transition:  .7s;
+}
+
+.dash_btn:hover:after{
+	transform : translateX(300px) skewX(-15deg);
+	opacity : 1;
+	transition:  .7s;
+}
+
+.dash_button2{
+	color : #ccc;
+	border : 1px solid #4285f4;
+
+}
+
+
+.dash_button2:before{
+	background : rgba(255 , 255 , 255 , .5);
+}
+
+.dash_button2:after{
+	background : rgba(255 , 255 , 255 , .2);
+}
+
+.dash_button2:hover{
+	background: #4285f4;
+	cursor : pointer;
+	color: black;
+}
+
+
+.dash_button3{
+	color : #ccc;
+	border : 1px solid #fbbc05;
+
+}
+
+.dash_button3:before{
+	background : rgba(255 , 255 , 255 , .5);
+}
+
+.dash_button3:after{
+	background : rgba(255 , 255 , 255 , .2);
+}
+
+.dash_button3:hover{
+	background: #fbbc05;
+	cursor : pointer;
+	color: black;
+}
+
+.navbar{
+  border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+
+.nav-item {
+  margin: 0 20px;
+  color: rgb(120 194 213) !important;
+}
+
+.close{
+  display: none !important;
+}
+
+.user_inst , .user_role{
+  text-align: center;
+}
+
+.user_role{
+  text-transform: uppercase;
+}
+
+.user_inst{
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #aaf7ff;
+}
+
+.virtual_classroom{
+  TEXT-ALIGN: center;
+    margin-top: 50px;
+    font-size: 91px;
+    color: #ffffffe6;
+}
+
+.hform{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hfile{
+  margin: 13px auto;
+  color: #35cadd;
+}
+
+.hfile:hover{
+  color: #95f3ff;;
+}
+
+.hh{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hchecked{
+  color: rgb(0, 199, 0);
+}
+
+.hunchecked{
+  color: rgb(250, 49, 49);
+}
+
+/* https://www.gstatic.com/classroom/themes/img_cycling.jpg */

@@ -1,0 +1,130 @@
+<!-- <div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+      <h1 class="mb-3">
+        <img src="/assets/secure-icon.png" alt="icon" width="20%" />
+      </h1>
+      <h2>
+        CLASS CREATION
+      </h2>
+      <form action="/admin/class-create" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>" />
+        </div>
+
+        <div class="form-group">
+          <label for="batch">batch</label>
+          <input type="number" id="batch" name="batch" class="form-control" placeholder="Enter batch"
+            value="<%= typeof batch != 'undefined' ? batch : '' %>" />
+        </div>
+
+  
+          <select name="branch" id="branch">
+
+          <%
+          var options = [ "CSE", "EE", "ECE", "CH", "CE", "ME" ];
+          for ( var i = 0; i < options.length; i++ )
+          {
+              %><option id="branch" name="branch" value="<%=options[ i ] %>" ><%= options[ i ] %></option><%
+          }
+          %>
+          </select>
+
+
+          <select name="faculty" id="faculty">
+
+            <%
+            for ( var i = 0; i < faculties.length; i++ )
+            {
+                %><option id="faculty" name="faculty" value="<%=faculties[ i ]._id %>" ><%= faculties[ i ].name %></option><%
+            }
+            %>
+  
+          </select>
+
+
+
+        <button type="submit" class="btn btn-primary btn-block">
+          CREATE
+        </button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="register_div">
+  <form action="/admin/class-create" method="POST" enctype="multipart/form-data">
+    <h3>Create Class</h3>
+  
+    <%- include (".././messages.ejs") %>
+  
+    <div class="form-group">
+      <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter Name"
+          value="<%= typeof name != 'undefined' ? name : '' %>" />
+    </div>
+  
+    <div class="list-choice institute">
+      <div class="list-choice-objects">
+        <% for ( var i = 0; i < faculties.length; i++ ) { %>
+        <label>
+          <input type="radio" name="faculty" value="<%=faculties[ i ]._id %>" />
+          <span><%= faculties[ i ].name %></span>
+        </label>
+        <% } %>
+      </div>
+      <div class="list-choice-title">Faculty</div>
+    </div>
+
+      <div style="width: 48%;" class="form-group batch">
+        <!-- <label for="batch">Batch</label> -->
+        <input
+          type="number"
+          id="batch"
+          name="batch"
+          placeholder="Enter Batch"
+          value="<%= typeof batch != 'undefined' ? batch : '' %>"
+        />
+      </div>
+  
+      <div style="width: 48%;" class="list-choice">
+        <div class="list-choice-title">Branch</div>
+        <div class="list-choice-objects">
+        <% var options = [ "Computer Science", "Electrical", "Electronics", "Chemical", "Civil", "Mechanical" ]; for ( var i =
+          0; i < options.length; i++ ) { %>
+          <label>
+            <input type="radio" name="branch" value="<%=options[ i ] %>" />
+            <span><%= options[ i ] %></span>
+          </label>
+          <% } %>
+        </div>
+      </div>
+
+      <div class="upload-main-wrapper">
+        <div class="upload-wrapper">
+          <!-- <input type="file" id="upload-file"> -->
+          <input type="file" name="file" id="file">
+          <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M"><path d="M4 15h2v3h12v-3h2v3c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2m4.41-7.59L11 7.83V16h2V7.83l2.59 2.59L17 9l-5-5-5 5 1.41 1.41z"></path></svg>
+          <span class="file-upload-text">Upload File</span>
+        </div>
+        <p id="file-upload-name"></p>
+      </div>
+    
+  
+    <button type="submit" class="btn btn-primary btn-block">Create</button>
+  
+    <div class="social go_to_login">
+      <a href="/auth/login">
+        <div class="go">
+          Cancel
+        </div>
+      </a>
+    </div>
+  </form>
+  </div>
+  
+  

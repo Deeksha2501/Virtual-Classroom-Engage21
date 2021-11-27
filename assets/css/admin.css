@@ -1,0 +1,38 @@
+.create_class{
+    display: block !important;
+    text-align: center;
+    align-items: center;
+    margin: 30px auto;
+    width: 200px;
+    height: 65px !important;
+    line-height: 50px !important;
+    height: 50px !important;
+    line-height: 35px !important;
+    width: 180px !important;
+    border-radius: 25px !important;
+}
+
+.create_class i{
+    margin-right: 10px;
+}
+
+.inst-name{
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-size: 35px;
+}
+
+
+
+.welcome-msg{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(150, 207, 218);
+    text-transform: capitalize;
+}
+
+.logout_btn{
+    float: right;
+    position: absolute;
+    right: 10px;
+  }

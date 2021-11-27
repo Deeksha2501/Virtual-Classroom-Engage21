@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg ">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        <a class="nav-item nav-link active" href= "<%= "/faculty/show-class/" + userClass._id + "/" %>" >Stream <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href= "<%= "/faculty/show-class/" + userClass._id + "/classwork" %>" >Classwork</a>
+        <a class="nav-item nav-link" href= "<%= "/faculty/show-class/" + userClass._id + "/members" %>" >Members</a>
+        </div>
+    </div>
+</nav>
+
+<div class="assignment_details">
+    <div class="a_title"><%= assignment.title %></div>
+    <!-- <div class="a_des"><%= assignment.description %></div> -->
+    <div class="a_faculty">Assigned By: <span><%= faculty %></span></div>
+    <a target="_blank" href="<%= assignment.fileName %>">
+        View Assignment
+    </a>
+</div>
+
+<!-- <%= assignment.title  %> -->
+
+<h3 class="sub_head"> Student Submissions </h3>
+
+<div class="submissions">
+
+<!-- <% for(let i=0 ; i < arrHomework.length ; i++){ %> 
+
+    
+    <div class="classes">
+        <%= arrHomework[i].studentId.name  %>
+        <a target="_blank" href= "<%= arrHomework[i].homeWorkFile %>" >
+            homework
+        </a>
+
+        
+        <hr>
+    </div>
+<% } %> -->
+
+
+<% for(let i=0 ; i < arrHomework.length ; i++){ %> 
+
+    <div class="disbox">
+        <div class="iconbox">
+          <span class="icon">
+            <i class="fas fa-clipboard-list"></i>
+          </span>
+        </div>
+        <div class="msgbox assignment_box">
+          <span class="s_name"><%= arrHomework[i].studentId.name %></span><br>
+          <span class="s_msg">
+            <a target="_blank" href= "<%= arrHomework[i].homeWorkFile %>" >
+                View Attachment
+            </a>
+          </span><br>
+
+        <div class="show_marks">
+            <%if (arrHomework[i].marks != -1) { %>
+                <span class="status checked">
+                   Assigned Marks : <%= arrHomework[i].marks %>
+                </span>
+                <% }else {%>
+                    <span class="status unchecked">
+                        Unchecked
+                    </span>
+                <% } %>
+            </div>
+        </div>
+    
+        <div class="marks_div">
+            
+        
+                <!-- /show-class/:classId/classwork/:assignmentId/submissions/:homeworkId/update-marks/:studentId -->
+                <div class="update_marks">
+                <form class="assign-marks" action="<%="/faculty/show-class/" + userClass._id + "/classwork/" + assignment._id + "/submissions/" + arrHomework[i]._id + "/update-marks/" + arrHomework[i].studentId._id + "/" %>" method="post">
+                    <input class = "minput" type="Number" placeholder="/100" name="marks" max="100" min="0">
+
+                    <button>
+                        <%if (arrHomework[i].marks != -1) { %>
+                            Update 
+                        <% }else{ %>
+                            Assign 
+                        <% } %>
+                    </button>
+                </form>
+            </div>
+        </div>
+    
+      </div>
+
+<% } %>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- //student model, homework  -->
+
+

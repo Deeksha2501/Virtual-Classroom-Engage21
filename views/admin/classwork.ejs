@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg ">
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar_items collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="<%= " /admin/show-class/" + userClass._id + "/" %>" >Stream <span
+          class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="<%= " /admin/show-class/" + userClass._id + "/classwork" %>" >Classwork</a>
+      <a class="nav-item nav-link" href="<%= " /admin/show-class/" + userClass._id + "/members" %>" >Members</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="assignment_div">
+
+  <!-- <a href="<%= " /faculty/" + userClass._id + "/create-assignment/" %>" class="btn btn-secondary create_assign">Create Assignmemt</a> -->
+
+  <!-- <% for(let i=0 ; i < arrAssignments.length ; i++){ %>
+    <div class="classes">
+      <a href="<%= " /faculty/show-class/" + userClass._id + "/classwork/" + arrAssignments[i]._id + "/" %>" >
+        <%= arrAssignments[i].title %>
+      </a>
+      <%= arrAssignments[i].description %>
+        <hr>
+    </div>
+    <% } %> -->
+
+
+<% for(let i=0 ; i < arrAssignments.length ; i++){ %>
+  <a href="<%= " /admin/show-class/" + userClass._id + "/classwork/" + arrAssignments[i]._id + "/" %>" >
+    <div class="disbox">
+      <div class="iconbox">
+        <span class="icon">
+          <i class="fas fa-clipboard-list"></i>
+        </span>
+      </div>
+      <div class="msgbox assignment_box">
+        <span class="s_name"><%= arrAssignments[i].title %></span><br>
+        <span class="s_msg"><%= arrAssignments[i].description %></span><br>
+      </div>
+
+      <div class="attachment">
+        <span class="dicon"> <%= arrAssignments[i].assignDate %></span>
+      </div>
+
+    </div>
+  </a>
+<% } %>
+</div>
+
+
+          <!-- <%= arrAssignments %> -->

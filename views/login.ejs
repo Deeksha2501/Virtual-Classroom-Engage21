@@ -1,0 +1,70 @@
+<!-- <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card-body text-center">
+            <h1 class="mb-3">
+                
+            </h1>
+            <h2>
+                Login
+            </h2>
+            <%- include ("./messages") %>
+            <form action="/auth/login" method="POST">
+                <div class="login_email form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" />
+                </div>
+                <div class="login_password form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"
+                        placeholder="Enter Password" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <p class="mt-4">
+                New User? <a href="/auth/register">Register</a>
+            </p>
+            <p>
+                Forgot Password? <a href="/auth/forgot">Reset</a>
+            </p>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="background">
+    <div class="shape">
+        <img src="/assets/microsoft.png" alt="icon" width="200px"/>
+    </div>
+</div> -->
+
+<form action="/auth/login" method="POST">
+  <h3>Login Here</h3>
+  <%- include ("./messages") %>
+
+  <div class="login_email form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email" />
+  </div>
+  <div class="login_password form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter Password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+  <div class="social">
+    <a href="/auth/register">
+      <div class="go">
+        New User?
+      </div>
+    </a>
+    <a href="/auth/forgot">
+      <div class="fb">
+        Reset Password
+      </div>
+    </a>
+  </div>
+</form>

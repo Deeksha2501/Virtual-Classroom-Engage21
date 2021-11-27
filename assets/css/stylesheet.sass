@@ -1,0 +1,72 @@
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+:root, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+}
+body {
+	display: grid;
+	place-items: center;
+	place-content: center;
+}
+.base {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+	width: 210px;
+	height: 70px;
+	border-radius: 3px;
+	color: #fff;
+	background: #027ad6;
+	font: 700 24px sans-serif;
+	box-shadow:
+		0 1px 2px rgba(0,0,0,0.07), 
+		0 2px 4px rgba(0,0,0,0.07), 
+		0 4px 8px rgba(0,0,0,0.07), 
+		0 8px 16px rgba(0,0,0,0.07),
+		0 16px 32px rgba(0,0,0,0.07), 
+		0 32px 64px rgba(0,0,0,0.07);
+}
+
+i {
+	width: calc(210px / 30);
+	height: calc(70px / 10);
+}
+
+@for $i from 1 through 10 {
+	i:nth-child(n + #{ 30 * ($i - 1) + 1 }):nth-child(-n + #{ 30 * $i }):hover ~ .bg {
+		--y: #{ 10 * $i }%;
+	}
+}
+
+@for $i from 1 through 30 {
+	i:nth-child(30n+#{ $i }):hover ~ .bg  {
+		--x: #{ 100 / 30 * $i }%;
+	}
+}
+
+.bg {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100%;
+	grid-column: 1 / span 30;
+  grid-row: 1 / span 10;
+	transition: opacity .3s;
+	pointer-events: none;
+	text-shadow: 0px 2px 5px rgba(0,0,0,.1);
+}
+
+i:hover ~ .bg {
+	background: radial-gradient(circle 110px at var(--x) var(--y), rgba(169, 242, 136, .4), rgba(169, 242, 136, 0));
+}

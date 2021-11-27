@@ -1,0 +1,27 @@
+<div class="user_image">
+    <div class="img_container">
+        <img src="<%= user.profileImage %>" alt="">
+    </div>
+</div>
+
+<h1 class="mt-4 profile_name"><%= user.name %></h1>
+<p class="user_inst"><%= user.inst.name %></p>
+<div class="user_role"><%= user.role %></div>
+
+<%if (session_user.role == "Admin" && !ownP) { %>
+<div style="text-align: center; margin-top: 20px;" class="a">
+    <a  style="color: red;" href= "<%= "/admin/remove-student/" + user._id + "/" %>">
+        Remove Member
+      </a>
+    </div>
+<% } %>
+
+
+
+
+
+
+<%if (ownP) { %>
+    <!-- --edit option-- -->
+<% } %>
+

@@ -1,0 +1,425 @@
+.class_image{
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 250px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.class_image img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.invite_std{
+  position: absolute;
+  left: 30px;
+  width: 180px;
+  bottom: 20px;
+}
+
+.invite_std i{
+  margin-right: 10px;
+}
+
+
+.class_image p{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.faculty_name{
+    top: 80px !important;
+    font-size: 22px !important;
+    text-transform: capitalize;
+    font-weight: unset !important;
+    /* color: rgb(224, 224, 224); */
+}
+
+
+.discussion_form{
+    transform: unset !important;
+    top: unset !important;
+    left:  unset !important;
+    position: unset !important;
+    background: transparent;
+    padding: 35px;
+}
+
+.dinput{
+    border-bottom: 1.5px solid #00b0bd;
+    height: 100px;
+    border-radius: 0;
+}
+
+/* .main-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+} */
+.upload-main-wrapper {
+  width: 150px;
+  display: inline-block;
+  /* margin: 0 auto; */
+}
+#file-upload-name {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+}
+.upload-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px auto 0;
+  position: relative;
+  cursor: pointer;
+  background-color: #007b83;
+  padding: 8px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.2s linear all;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.upload-main-wrapper svg{
+    cursor: pointer;
+}
+
+.upload-wrapper input[type="file"] {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.upload-wrapper > svg {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  color: white;
+    fill: white
+}
+.upload-wrapper.success > svg {
+  /* transform: translateX(-200px); */
+}
+.upload-wrapper.uploaded {
+  transition: 0.2s linear all;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  text-align: center;
+}
+
+.upload-wrapper.uploaded svg{
+  margin-left: 5px;
+}
+
+.upload-wrapper .file-upload-text {
+  position: absolute;
+  left: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s linear all;
+}
+.upload-wrapper.uploaded .file-upload-text {
+  text-indent: -999px;
+  margin: 0;
+}
+.file-success-text {
+  opacity: 0;
+  transition: 0.2s linear all;
+  visibility: hidden;
+  transform: translateX(200px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-success-text svg {
+  width: 25px;
+  height: auto;
+}
+.file-success-text span {
+  margin-left: 15px;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+.post_btn{
+    display: inline-block;
+    width: 100px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: #8f8f8f;
+    float: right;
+    position: absolute;
+    right: 50px;
+    bottom: 35px;
+    height: 40px;
+    color: black;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.disbox{
+	position: relative;
+	display: flex;
+	width : 100%;
+	margin: 0 auto;
+	background: transparent;
+	color: white;
+	border : 1px solid  rgb(48 , 48 , 48);
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.iconbox{
+	flex-direction: left;
+	width : 40px;
+	align-items: left;
+	font-size: 30px;
+	padding: 10px;
+	color : #cfecfd;
+    margin-left: 20px;
+}
+
+.msgbox{
+	padding-top: 8px;
+	flex-direction: right;
+	width : 80%;
+	margin-left : 30px;
+}
+
+.assignment_box{
+    margin-left: 20px !important;
+}
+
+.s_name{
+	font-size: 15px;
+	color : #35cadd;
+    text-transform: capitalize;
+    
+}
+.s_msg{
+	font-size: 13px;
+	color : #cfecfd
+}
+
+.attachment{
+	margin-top: 20px;
+	position: absolute;
+	right: 30px;
+}
+.dicon{
+	/* margin-left : 60px; */
+	color : rgb(168, 168, 168);
+	padding : 15px;
+    font-size: 15px;
+}
+
+.dicon :hover{
+	color : rgb(196, 33, 33);
+}
+
+.create_assign{
+    background-color: #0e96a8;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* float: right; */
+    /* margin-bottom: 20px; */
+    /* margin: 0 auto; */
+
+}
+
+.assign-marks{
+  all: unset !important;
+}
+
+/* <div class="assignment_details">
+    <div class="a_title"><%= assignment.title %></div>
+    <div class="a_des"><%= assignment.description %></div>
+    <div class="a_faculty">faculty</div>
+    <a target="_blank" href="<%= assignment.fileUrl %>">
+        View Assignment
+    </a>
+</div> */
+
+.assignment_details{
+  width: 25%;
+  min-height: 150px;
+  border-radius: 0.5rem;
+  position: relative;
+  /* right: 0;
+  top: 0; */
+  float: right;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(3 11 19);
+  box-shadow: -1px 0px 7px 0px #5f5f5fc2;
+}
+
+.a_title{
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.a_des{
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #cfecfd;
+}
+
+.a_faculty{
+  margin-top: 5px;
+  color: #cfecfd;
+  font-size: 15px;
+}
+
+.assignment_details a{
+  position: absolute;
+  bottom: 10px;
+}
+
+.sub_head{
+  margin-top: 20px;
+  color: #cfecfd;
+}
+
+.submissions{
+  margin-top: 20px;
+  width: 70%;
+  float: left;
+}
+
+.minput{
+	background: transparent;
+	border-bottom: 1px solid #35cadd;
+  display: inline-block;
+  width: 50%;
+	color : #cfecfd; 
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 0;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.marks_div{
+  float: right;
+  width: 60%;
+  position: relative;
+}
+
+.show_marks{
+    display: block;
+    margin-top: 10px;
+
+}
+
+.show_marks_admin {
+  float: right;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+
+
+.marks_div button{
+  background: #35cadd;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  /* float: right; */
+  margin-right: 10px;
+  /* display: inline-block;
+  align-self: baseline; */
+  /* position: absolute;
+  bottom: 0; */
+  position: absolute;
+    bottom: 9px;
+}
+
+.update_marks{
+  position: absolute;
+  bottom: 12px;
+  position: absolute;
+  right: -10px;
+  width: 100%;
+}
+
+.show_marks{
+  margin-bottom: 15px;
+  font-size: 14px
+}
+
+.checked{
+  color: rgb(112, 204, 112);
+}
+
+.unchecked{
+  color: red;
+}
+
+.assignment_div{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.submit_assignment{
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+
+.discuss_div{
+  margin-bottom: 80px !important;
+  width: 100%;
+  padding-top: 0;
+  margin: 0 auto;
+}
+
+.profile_name{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 27px;
+  padding-top: 20px;
+}

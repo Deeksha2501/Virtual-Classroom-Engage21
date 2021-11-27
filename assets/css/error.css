@@ -1,0 +1,42 @@
+.center-xy {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+}
+.copy-container {
+  text-align: center;
+}
+.pp {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.handle {
+  background: #00eeff;
+  width: 14px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+}
+#cb-replay {
+  fill: #666;
+  width: 20px;
+  margin: 15px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  overflow: inherit;
+  cursor: pointer;
+}
+#cb-replay:hover {
+  fill: #888;
+}

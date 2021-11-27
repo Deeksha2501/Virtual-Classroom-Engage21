@@ -1,0 +1,82 @@
+.scommon{
+	width : 70%;
+	/* margin-top : 70px; */
+	/* position: absolute; */
+    margin: 0 auto;
+}
+
+.shcommon{
+    padding: 0 5%;
+    /* text-align: center; */
+	width: 100%;
+	/* max-width: 1000px; */
+    margin: 0 auto;
+    margin-top: 71px;
+    position: absolute;
+}
+
+.teacher{
+	margin : 0 auto;
+	padding-top: 30px;
+	width : 90%;
+	/* max-width: 1000px; */
+}
+
+.f_head{
+	padding-left: 15px;
+	padding-bottom: 10px;
+	color : rgb(73 , 168 , 176);
+	font-size : 31px;
+	border-bottom: 1px solid rgb(73 , 168 , 176);
+}
+
+.fh_head{
+	margin-top: 30px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+	color : rgb(73 , 168 , 176);
+	font-size : 25px;
+	border-bottom: 1px solid rgb(73 , 168 , 176);
+}
+
+.teacher_name{
+	color : white;
+	font-size: 14px;
+	padding : 15px;
+	margin-left : 7px;
+}
+
+.std{
+	margin : 0 auto;
+	padding-top: 30px;
+	width : 90%;
+	/* max-width: 1000px; */
+}
+
+.stds{
+	color : white;
+	font-size: 14px;
+	padding : 15px;
+	margin-top : 8px;
+	margin-left : 7px;
+	border-bottom: 1px solid rgb(38 , 38 , 38);
+}
+
+.stds a , .teacher_name a{
+    color: white;
+    text-transform: capitalize;
+}
+
+.stds:hover a , .teacher_name:hover a{
+    color: rgb(170, 170, 170);
+}
+
+.rmv_std{
+	/* width : 30%; */
+	float: right;
+}
+
+.rmv_std a{
+    color: rgb(255, 25, 25) !important;
+
+}

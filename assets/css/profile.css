@@ -1,0 +1,17 @@
+.user_image{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    height: 220px;
+}
+
+.img_container{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img_container img{
+    width: 100%;
+}
