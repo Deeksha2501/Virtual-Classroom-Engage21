@@ -56,6 +56,9 @@ The key features include
 * Check profile of any member of the institute.
 * Can check the students and faculties of the institute in members tab.
 
+### Video
+[The video demo for the project](https://www.youtube.com/watch?v=-WnWxI7arfI)
+
 ## User Specific Features and roles
 An institute can register itself to the app and create an admin user for the same.
 
@@ -97,10 +100,6 @@ An institute can register itself to the app and create an admin user for the sam
 * Checking grades assigned for a particular assignment.
 * Viewing all Classmates and faculty of the class.
 * Adding profile Image.
-
-
-  
-[The video demo for the project](https://www.youtube.com/watch?v=-WnWxI7arfI)
 
 
 ## Images
