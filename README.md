@@ -111,29 +111,28 @@ Homescreen looks like :
 ![Admin Homepage](Readme_images/Admin/admin_home.png)
 
 Admin dashboard :
-![Admin Homepage](Readme_images/Admin/admin_dashboard.png)
+![Admin Dashboard](Readme_images/Admin/admin_dashboard.png)
 
 Admin class creation:
-![Admin Homepage](Readme_images/Admin/admin_createclass.png)
+![Admin class creation](Readme_images/Admin/admin_createclass.png)
 
 Admin view class :
-![Admin Homepage](Readme_images/Admin/admin_showclass.png)
+![Admin view class](Readme_images/Admin/admin_showclass.png)
 
 Admin checking classwork:
-![Admin Homepage](Readme_images/Admin/admin_classwork.png)
+![Admin checking classwork](Readme_images/Admin/admin_classwork.png)
 
 Viewing Student submissions and grades:
-![Admin Homepage](Readme_images/Admin/admin_studentsubmissions.png)
+![Viewing Student submissions and grades](Readme_images/Admin/admin_studentSubmissions.png)
 
 Viewing members of the class:
-![Admin Homepage](Readme_images/Admin/admin_members.png)
+![Viewing members of the class](Readme_images/Admin/admin_members.png)
 
 Assignment creation by faculty
 ![Admin Homepage](Readme_images/create_assignment.png)
 
 Viewing student submissions and assigning grades
 ![Admin Homepage](Readme_images/givingGrades.png)
-
 
 Viewing profile page
 ![Admin Homepage](Readme_images/profilepage.png)
