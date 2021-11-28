@@ -105,4 +105,12 @@ An institute can register itself to the app and create an admin user for the sam
 
 ## Images
 
-Homescreen looks like 
+#### Admin
+
+Homescreen looks like :
+![Admin Homepage](Readme_images/Admin/admin_home.png)
+
+Admin Dashboard :
+![Admin Homepage](Readme_images/Admin/admin_dashboard.png)
+
+
